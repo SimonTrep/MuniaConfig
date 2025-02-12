@@ -252,7 +252,7 @@ endpoints:
   #     forcePrompt: false
   #     modelDisplayLabel: 'Portkey'
   #     iconURL: https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/rjqy7ghvjoiu4cd1xjbf
-# fileConfig:
+fileConfig:
 #   endpoints:
 #     assistants:
 #       fileLimit: 5
@@ -268,8 +268,8 @@ endpoints:
 #     YourCustomEndpointName:
 #       fileLimit: 2
 #       fileSizeLimit: 5
-#   serverFileSizeLimit: 100  # Global server file size limit in MB
-#   avatarSizeLimit: 2  # Limit for user avatar image size in MB
+  serverFileSizeLimit: 25  # Global server file size limit in MB
+  avatarSizeLimit: 5  # Limit for user avatar image size in MB
 # See the Custom Configuration Guide for more information on Assistants Config:
 # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
 modelSpecs:
