@@ -599,6 +599,44 @@ modelSpecs:
         max_tokens: 4096
         assistant_id: "asst_w4xq2KDMvN6EHzWAx7ouNiRr"
         temperature: 0.7
+    - name: "comparateur_reglement_municipaux"
+      label: "Greffe - Comparateur des règlements municipaux"
+      description: "L'Assistant de Comparaison de Règlements Municipaux compare les réglementations d'une municipalité avec celles d'autres villes pour en identifier les points forts, les faiblesses et proposer des pistes d'amélioration."
+      #iconURL: "https://drive.google.com/file/d/1iUb73VbkFFA7kbDYuq_oeMOwcACC0AUq/view?usp=sharing" #TODO Change Icon URL
+      showIconInMenu: false
+      showIconInHeader: false
+      default: false
+      preset:
+        endpoint: "assistants"
+        modelLabel: "Greffe - Comparateur des règlements municipaux"
+        model: "gpt-4o"
+        greeting: "Je suis votre assistant spécialisé dans la comparaison et l'analyse de règlements municipaux. Mon rôle est de comparer vos réglementations avec celles d'autres municipalités pour vous aider à améliorer vos politiques locales. Vous pouvez me fournir un ou plusieurs documents, et je vous indiquerai les similitudes, différences, points forts et faiblesses, ainsi que des suggestions d'amélioration. Utilisons ensemble les meilleures pratiques pour perfectionner vos règlements municipaux. Prêt à commencer ?"
+        promptPrefix: ""
+        resendFiles: false
+        imageDetail: "auto"
+        maxContextTokens: 128000
+        max_tokens: 4096
+        assistant_id: "asst_AOiY4DPXyADK1aVbTacy15qW"
+        temperature: 0.7
+    - name: "politique_interne_ia"
+      label: "Greffe - Générateur de politique interne sur l'utilisation de l'IA"
+      description: " L'Assistant de Génération de Politique Interne d'Utilisation de l'Intelligence Artificielle accompagne les utilisateurs dans la création d'une politique adaptée à leur organisation. Ce processus structuré étape par étape permet de choisir, personnaliser et rédiger chaque section de la politique avec des suggestions guidées et des options prédéfinies."
+      #iconURL: "https://drive.google.com/file/d/1iUb73VbkFFA7kbDYuq_oeMOwcACC0AUq/view?usp=sharing" #TODO Change Icon URL
+      showIconInMenu: false
+      showIconInHeader: false
+      default: false
+      preset:
+        endpoint: "assistants"
+        modelLabel: "Greffe - Générateur de politique interne sur l'utilisation de l'IA"
+        model: "gpt-4o"
+        greeting: "Je suis votre assistant dédié à la création de votre politique interne sur l'utilisation de l'intelligence artificielle (IA). Mon rôle est de vous guider étape par étape pour rédiger une politique claire et personnalisée. Vous pouvez suivre mes suggestions ou personnaliser chaque section selon vos besoins. À chaque étape, je vous présenterai des options pour structurer votre document de manière cohérente et conforme aux meilleures pratiques. Prêt à commencer ?"
+        promptPrefix: ""
+        resendFiles: false
+        imageDetail: "auto"
+        maxContextTokens: 128000
+        max_tokens: 4096
+        assistant_id: "asst_jFfJ21WxrDq9v6vSqcZsoCea"
+        temperature: 0.7
     - name: "generation_rapports_evenements"
       label: "Loisirs - Génération de rapports d'évènements"
       description: "L'Assistant de rédaction de rapports d'événements guide les membres de l'équipe des loisirs de la municipalité dans la complétion des rapports post-événements en suivant un format structuré et en garantissant la clarté et la cohérence du document final."
