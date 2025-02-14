@@ -295,6 +295,25 @@ modelSpecs:
         max_tokens: 4096
         assistant_id: "asst_iEZG3SNLVwD3sywIxgIOIqBU"
         temperature: 0.7
+    - name: "mot_du_maire"
+      label: "Communication - Générateur du mot du maire"
+      description: "L'Assistant de Génération du Mot du Maire crée un texte personnalisé destiné à la population à partir de documents, notes vocales ou instructions fournies."
+      #iconURL: ""
+      showIconInMenu: false
+      showIconInHeader: false
+      default: false
+      preset:
+        endpoint: "assistants"
+        modelLabel: "Communication - Générateur du mot du maire"
+        model: "gpt-4o"
+        greeting: "Je suis votre assistant pour la rédaction du mot du maire. Vous pouvez me fournir des documents, des notes ou des messages vocaux, et je rédigerai un texte clair et engageant pour votre population. Le mot sera personnalisé et structuré pour vos publications mensuelles. N'hésitez pas à y ajouter votre touche personnelle avant de le publier. Prêt à commencer ? Partagez vos informations clés, et je m'occupe du reste !"
+        promptPrefix: ""
+        resendFiles: false
+        imageDetail: "auto"
+        maxContextTokens: 128000
+        max_tokens: 4096
+        assistant_id: "asst_Z07pdUjgCNfOIwk2R6c5i5ky"
+        temperature: 0.7
     - name: "calendrier_obligations_municipales"
       label: "Direction - Calendrier des obligations municipales"
       description: "L'Assistant de calendrier des obligations municipales vous informe des actions obligatoires à effectuer ce mois-ci selon le Code municipal du Québec."
@@ -732,4 +751,4 @@ modelSpecs:
         max_tokens: 4096
         assistant_id: "asst_Cxkotdnnhc4NeOOyKEoWeaDb"
         temperature: 0.7
-        #test
+        
