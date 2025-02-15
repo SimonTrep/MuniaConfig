@@ -295,6 +295,25 @@ modelSpecs:
         max_tokens: 4096
         assistant_id: "asst_iEZG3SNLVwD3sywIxgIOIqBU"
         temperature: 0.7
+    - name: "mot_du_maire"
+      label: "Communication - Générateur du mot du maire"
+      description: "L'Assistant de Génération du Mot du Maire crée un texte personnalisé destiné à la population à partir de documents, notes vocales ou instructions fournies."
+      #iconURL: ""
+      showIconInMenu: false
+      showIconInHeader: false
+      default: false
+      preset:
+        endpoint: "assistants"
+        modelLabel: "Communication - Générateur du mot du maire"
+        model: "gpt-4o"
+        greeting: "Je suis votre assistant pour la rédaction du mot du maire. Vous pouvez me fournir des documents, des notes ou des messages vocaux, et je rédigerai un texte clair et engageant pour votre population. Le mot sera personnalisé et structuré pour vos publications mensuelles. N'hésitez pas à y ajouter votre touche personnelle avant de le publier. Prêt à commencer ? Partagez vos informations clés, et je m'occupe du reste !"
+        promptPrefix: ""
+        resendFiles: false
+        imageDetail: "auto"
+        maxContextTokens: 128000
+        max_tokens: 4096
+        assistant_id: "asst_Z07pdUjgCNfOIwk2R6c5i5ky"
+        temperature: 0.7
     - name: "calendrier_obligations_municipales"
       label: "Direction - Calendrier des obligations municipales"
       description: "L'Assistant de calendrier des obligations municipales vous informe des actions obligatoires à effectuer ce mois-ci selon le Code municipal du Québec."
@@ -333,25 +352,25 @@ modelSpecs:
         max_tokens: 4096
         assistant_id: "asst_a0r0dmthhu4FEO8Xa9KlHeHg"
         temperature: 0.7
-    - name: "aide_subventions_municipales"
-      label: "Direction - Aide aux subventions municipales"
-      description: "L'Assistant d'aide aux subventions municipales vous aide à identifier les subventions auxquelles votre municipalité pourrait être éligible en fonction de votre projet."
+    #- name: "aide_subventions_municipales"
+      #label: "Direction - Aide aux subventions municipales"
+      #description: "L'Assistant d'aide aux subventions municipales vous aide à identifier les subventions auxquelles votre municipalité pourrait être éligible en fonction de votre projet."
       #iconURL: "https://drive.google.com/file/d/15rcB4OzMf9-KnRf9Eo6j-3Hbl40zeUWg/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Direction - Aide aux subventions municipales"
-        model: "o3-mini"
-        greeting: "Je suis votre assistant pour vous aider à trouver des subventions municipales adaptées à votre projet. Dites-moi ce que vous souhaitez accomplir, et je vous proposerai des subventions potentielles. Pour de meilleurs résultats, n'hésitez pas à interagir avec moi plusieurs fois afin d'affiner la recherche. Une fois une subvention identifiée, il est important de vérifier directement sur les sites web officiels pour confirmer les critères et modalités. Posez-moi vos questions et commençons ensemble votre recherche !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_IgzEGoyucht3V8cFyQLwniOv"
-        temperature: 0.7
+      #showIconInMenu: false
+      #showIconInHeader: false
+      #default: false
+      #preset:
+        #endpoint: "assistants"
+        #modelLabel: "Direction - Aide aux subventions municipales"
+        #model: "o3-mini"
+        #greeting: "Je suis votre assistant pour vous aider à trouver des subventions municipales adaptées à votre projet. Dites-moi ce que vous souhaitez accomplir, et je vous proposerai des subventions potentielles. Pour de meilleurs résultats, n'hésitez pas à interagir avec moi plusieurs fois afin d'affiner la recherche. Une fois une subvention identifiée, il est important de vérifier directement sur les sites web officiels pour confirmer les critères et modalités. Posez-moi vos questions et commençons ensemble votre recherche !"
+        #promptPrefix: ""
+        #resendFiles: false
+        #imageDetail: "auto"
+        #maxContextTokens: 128000
+        #max_tokens: 4096
+        #assistant_id: "asst_IgzEGoyucht3V8cFyQLwniOv"
+        #temperature: 0.7
     - name: "analyseur_risques_municipaux_personnalise"
       label: "Direction - Analyseur de risques municipaux personnalisé"
       description: "L'Assistant d'analyse des risques municipaux évalue les risques comptables, financiers et opérationnels d'une municipalité et génère un rapport personnalisé avec des recommandations adaptées."
@@ -732,4 +751,4 @@ modelSpecs:
         max_tokens: 4096
         assistant_id: "asst_Cxkotdnnhc4NeOOyKEoWeaDb"
         temperature: 0.7
-        #test
+        
