@@ -542,25 +542,25 @@ modelSpecs:
         max_tokens: 4096
         assistant_id: "asst_tcNvsH0YEz8kQ9cu6csmN8lU"
         temperature: 0.7    
-    - name: "recherche_lois_municipales_comparatives"
-      label: "Greffe - Recherche de lois municipales comparatives"
-      description: "L'Assistant de recherche en droit municipal aide à identifier, analyser et structurer les lois municipales du Québec en tenant compte des distinctions entre le Code municipal et la Loi sur les cités et villes."
+    #- name: "recherche_lois_municipales_comparatives"
+      #label: "Greffe - Recherche de lois municipales comparatives"
+      #description: "L'Assistant de recherche en droit municipal aide à identifier, analyser et structurer les lois municipales du Québec en tenant compte des distinctions entre le Code municipal et la Loi sur les cités et villes."
       #iconURL: "https://drive.google.com/file/d/1_lHmyPQ9IpXaVh4isPOXRm3aoq-B5XZ7/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Greffe - Recherche de lois municipales comparatives"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant juridique spécialisé en droit municipal du Québec. Vous souhaitez rédiger ou mettre à jour une loi locale ? Je peux vous aider à identifier des réglementations existantes, à trouver des références légales pertinentes et à structurer un tableau clair des meilleures pratiques adoptées par d'autres municipalités. Indiquez-moi si vous travaillez dans le cadre du Code municipal ou de la Loi sur les cités et villes, ainsi que la nature exacte de votre recherche, et je vous fournirai une analyse détaillée avec des liens vers les sources officielles. Prêt à démarrer ? Dites-moi ce dont vous avez besoin !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_PbjYUrBUo0zQR65JRolCWu7g"
-        temperature: 0.7
+      #showIconInMenu: false
+      #showIconInHeader: false
+      #default: false
+      #preset:
+        #endpoint: "assistants"
+        #modelLabel: "Greffe - Recherche de lois municipales comparatives"
+        #model: "gpt-4o"
+        #greeting: "Je suis votre assistant juridique spécialisé en droit municipal du Québec. Vous souhaitez rédiger ou mettre à jour une loi locale ? Je peux vous aider à identifier des réglementations existantes, à trouver des références légales pertinentes et à structurer un tableau clair des meilleures pratiques adoptées par d'autres municipalités. Indiquez-moi si vous travaillez dans le cadre du Code municipal ou de la Loi sur les cités et villes, ainsi que la nature exacte de votre recherche, et je vous fournirai une analyse détaillée avec des liens vers les sources officielles. Prêt à démarrer ? Dites-moi ce dont vous avez besoin !"
+        #promptPrefix: ""
+        #resendFiles: false
+        #imageDetail: "auto"
+        #maxContextTokens: 128000
+        #max_tokens: 4096
+        #assistant_id: "asst_PbjYUrBUo0zQR65JRolCWu7g"
+        #temperature: 0.7
     - name: "conformite_legale_loi_sur_cites_et_villes"
       label: "Greffe - Conformité légale - loi sur les cités et villes"
       description: "L'Assistant de vérification de conformité à la loi C-19 compare les règlements municipaux locaux avec la Loi sur les cités et villes (Loi C-19) du Québec afin d'identifier toute divergence et de proposer des ajustements conformes."
