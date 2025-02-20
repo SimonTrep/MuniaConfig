@@ -294,7 +294,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_iEZG3SNLVwD3sywIxgIOIqBU"
-        temperature: 0.7
+        temperature: 1
     - name: "mot_du_maire"
       label: "Communication - Générateur du mot du maire"
       description: "L'Assistant de Génération du Mot du Maire crée un texte personnalisé destiné à la population à partir de documents, notes vocales ou instructions fournies."
@@ -313,7 +313,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_Z07pdUjgCNfOIwk2R6c5i5ky"
-        temperature: 0.7
+        temperature: 1
     - name: "calendrier_obligations_municipales"
       label: "Direction - Calendrier des obligations municipales"
       description: "L'Assistant de calendrier des obligations municipales vous informe des actions obligatoires à effectuer ce mois-ci selon le Code municipal du Québec."
@@ -332,7 +332,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_bwQGFMrfjRVSTyIUuV96iykS"
-        temperature: 0.7
+        temperature: 1
     - name: "generateur_vision_strategique"
       label: "Direction - Générateur de vision stratégique"
       description: "L'Assistant générateur de vision stratégique vous aide à structurer et affiner votre vision en posant des questions, en proposant des idées et en s'inspirant des meilleures pratiques internationales."
@@ -351,7 +351,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_a0r0dmthhu4FEO8Xa9KlHeHg"
-        temperature: 0.7
+        temperature: 1
     #- name: "aide_subventions_municipales"
       #label: "Direction - Aide aux subventions municipales"
       #description: "L'Assistant d'aide aux subventions municipales vous aide à identifier les subventions auxquelles votre municipalité pourrait être éligible en fonction de votre projet."
@@ -370,7 +370,7 @@ modelSpecs:
         #maxContextTokens: 128000
         #max_tokens: 4096
         #assistant_id: "asst_IgzEGoyucht3V8cFyQLwniOv"
-        #temperature: 0.7
+        #temperature: 1
     - name: "analyseur_risques_municipaux_personnalise"
       label: "Direction - Analyseur de risques municipaux personnalisé"
       description: "L'Assistant d'analyse des risques municipaux évalue les risques comptables, financiers et opérationnels d'une municipalité et génère un rapport personnalisé avec des recommandations adaptées."
@@ -389,7 +389,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_vqqeyPhZw3ONZVNPB6hFfovt"
-        temperature: 0.7
+        temperature: 1
     - name: "conseiller_juridique_pour_dg_municipaux"
       label: "Direction - Conseiller juridique pour dg municipaux"
       description: "L'Assistant de conseil juridique municipal aide les directeurs généraux et greffiers à comprendre les droits, obligations et marges de manœuvre légales d'une Ville en fournissant des réponses juridiques précises avec des références détaillées."
@@ -408,7 +408,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_zo6aqZG6kTGdoaGCfVU5kAFX"
-        temperature: 0.7
+        temperature: 1
     - name: "ecrire_analyser_demande_subvention"
       label: "Direction - Écrire/analyser une demande de subvention"
       description: "L'Assistant de rédaction de demandes de subvention génère des réponses adaptées aux formulaires de subvention en s'appuyant sur les informations fournies par l'utilisateur, tout en respectant les exigences spécifiques de chaque programme."
@@ -427,7 +427,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_2T4kYO1RL2Xa4pA2JspVHprh"
-        temperature: 0.7 
+        temperature: 1 
     - name: "analyser_budgets_et_projections_financieres"
       label: "Finance - Analyser des budgets et projections financières"
       description: "L'Assistant de budgétisation et projections financières aide les responsables municipaux à analyser les budgets passés, générer des projections budgétaires et identifier des stratégies d'optimisation financière conformes aux réglementations québécoises et canadiennes."
@@ -446,7 +446,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_caERV9UYedA4FjKeeTMkxbxv"
-        temperature: 0.7   
+        temperature: 1   
     - name: "generateur_prompts_standardises"
       label: "Général - Générateur de prompts standardisés"
       description: "L'Assistant générateur de prompt standardisé crée des prompts optimisés selon une méthode définie, en intégrant tous les paramètres nécessaires, que ce soit sous forme de texte ou de message vocal."
@@ -465,7 +465,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_8YGVwDJJaTqbjVRKfaDLtMtT"
-        temperature: 0.7
+        temperature: 1
     - name: "generateur_sommaire_executif"
       label: "Général - Générateur sommaire exécutif"
       description: "L'Assistant générateur de sommaire éxécutif synthétise les données clés d'un rapport consolidé municipal en un résumé clair, structuré et concis, permettant une compréhension rapide des points essentiels."
@@ -484,7 +484,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_v9n6wskfJTDnjVZqIVJuTr9X"
-        temperature: 0.7
+        temperature: 1
     - name: "generer_comptes_rendus_reunion"
       label: "Général - Générer des comptes rendus de réunion"
       description: "L'Assistant de comptes rendus de réunion génère des comptes rendus précis, formels et structurés à partir de transcriptions, documents texte ou enregistrements audio, en s'adaptant au contexte professionnel et en garantissant la confidentialité."
@@ -503,7 +503,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_ftPfGaaMJXV3A1nlPXD03WEq"
-        temperature: 0.7
+        temperature: 1
     - name: "createur_sommaires_decisionnels_municipaux"
       label: "Général - Créateur de sommaires décisionnels municipaux"
       description: "L'Assistant de rédaction de sommaires décisionnels municipaux structure et rédige des documents analytiques et persuasifs destinés aux instances décisionnelles municipales. "
@@ -522,7 +522,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_47PpLJmTArQbYWvkHSGeGv5N"
-        temperature: 0.7
+        temperature: 1
     - name: "redacteur_resolutions_municipales"
       label: "Greffe - Rédacteur de résolutions municipales"
       description: "L'Assistant générateur de résolution municipale rédige des résolutions conformes aux standards municipaux à partir d'un document, d'une offre de service, d'un sommaire décisionnel ou d'une demande vocale."
@@ -579,7 +579,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_RmXz3PRxBizfLEuwSAdcopa4"
-        temperature: 0.7
+        temperature: 1
     - name: "conformite_legale_code_municipal_quebec"
       label: "Greffe - Conformité légale - code municipal du québec"
       description: "L'Assistant de vérification de conformité au code municipal du Québec compare les règlements municipaux locaux avec le Code municipal du Québec afin d'identifier toute divergence et de proposer des ajustements conformes."
@@ -598,7 +598,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_mlxbIIeOE7URa7IEZKoy7Jol"
-        temperature: 0.7
+        temperature: 1
     - name: "agent_analyse_jurisprudence"
       label: "Greffe - Agent d'analyse de jurisprudence"
       description: "L'Assistant d'analyse et de résumé de jurisprudence génère des résumés standardisés de décisions juridiques volumineuses, en mettant en avant les faits clés, les argumentaires des parties et la justification de la décision finale."
@@ -617,7 +617,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_w4xq2KDMvN6EHzWAx7ouNiRr"
-        temperature: 0.7
+        temperature: 1
     - name: "comparateur_reglement_municipaux"
       label: "Greffe - Comparateur des règlements municipaux"
       description: "L'Assistant de Comparaison de Règlements Municipaux compare les réglementations d'une municipalité avec celles d'autres villes pour en identifier les points forts, les faiblesses et proposer des pistes d'amélioration."
@@ -636,7 +636,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_AOiY4DPXyADK1aVbTacy15qW"
-        temperature: 0.7
+        temperature: 1
     - name: "politique_interne_ia"
       label: "Greffe - Générateur de politique interne sur l'utilisation de l'IA"
       description: " L'Assistant de Génération de Politique Interne d'Utilisation de l'Intelligence Artificielle accompagne les utilisateurs dans la création d'une politique adaptée à leur organisation. Ce processus structuré étape par étape permet de choisir, personnaliser et rédiger chaque section de la politique avec des suggestions guidées et des options prédéfinies."
@@ -655,7 +655,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_jFfJ21WxrDq9v6vSqcZsoCea"
-        temperature: 0.7
+        temperature: 1
     - name: "generation_rapports_evenements"
       label: "Loisirs - Génération de rapports d'évènements"
       description: "L'Assistant de rédaction de rapports d'événements guide les membres de l'équipe des loisirs de la municipalité dans la complétion des rapports post-événements en suivant un format structuré et en garantissant la clarté et la cohérence du document final."
@@ -674,7 +674,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_hBUC3XSTsK29jhEPlLn09bak"
-        temperature: 0.7
+        temperature: 1
     - name: "adapteur_mesures_preparation_sinistres"
       label: "Service incendie - Adapteur de mesures de préparation aux sinistres"
       description: "L'Assistant d'adaptation des plans de mesures d'urgence ajuste ou crée les plans génériques aux besoins spécifiques des municipalités québécoises, en tenant compte des infrastructures critiques, des risques locaux et des priorités d'intervention."
@@ -693,7 +693,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_UMN6GzKcRP0WsOmKGA5Xg8ec"
-        temperature: 0.7
+        temperature: 1
     - name: "verification_demandes_permis"
       label: "Travaux publics - Vérification des demandes de permis"
       description: "L'Assistant de vérification des demandes de permis analyse les demandes de permis de construction pour déterminer si elles sont complètes ou nécessitent des corrections avant de passer à l'étape suivante."
@@ -712,7 +712,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_wSuew6LyxUMnY741a6DXxisH"
-        temperature: 0.7
+        temperature: 1
     - name: "assistant_evaluation_appels_offres"
       label: "Travaux publics - Assistant d'évaluation d'appels d'offres"
       description: "L'Assistant d'évaluation des appels d'offres municipaux guide l'utilisateur étape par étape dans l'analyse et la notation des soumissions en validant chaque critère avant de passer à l'étape suivante."
@@ -731,7 +731,7 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_GgKb5TbADLXlmRFmnzl3tTom"
-        temperature: 0.7
+        temperature: 1
     - name: "creation_grilles_analyse_appels_offres"
       label: "Travaux publics - Création de grilles d'analyse d'appels d'offres"
       description: "L'Assistant de création de grilles d'analyse d'appels d'offres municipaux aide à structurer et personnaliser les grilles d'évaluation et de correction des appels d'offres publics en respectant les standards légaux et les recommandations officielles."
@@ -750,5 +750,5 @@ modelSpecs:
         maxContextTokens: 128000
         max_tokens: 4096
         assistant_id: "asst_Cxkotdnnhc4NeOOyKEoWeaDb"
-        temperature: 0.7
+        temperature: 1
         
