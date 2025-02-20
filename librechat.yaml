@@ -453,7 +453,7 @@ modelSpecs:
       #iconURL: "https://drive.google.com/file/d/1Hu0MnVzbFmt-COeL1hzafe0_98CsArVg/view?usp=sharing"
       showIconInMenu: false
       showIconInHeader: false
-      default: true
+      default: false
       preset:
         endpoint: "assistants"
         modelLabel: "Général - Générateur de prompts standardisés"
