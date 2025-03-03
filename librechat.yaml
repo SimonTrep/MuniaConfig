@@ -279,9 +279,9 @@ modelSpecs:
     - name: "generateur_post_facebook"
       label: "Communication - Générateur de post facebook"
       description: "L'Assistant de génération de publications Facebook crée trois versions distinctes de publications optimisées pour les citoyens d'une municipalité, en s'adaptant au style des communications existantes pour maximiser l'engagement."
-      #iconURL: "https://drive.google.com/file/d/1CSY1ONeeLrCgyewKnciude2y3lg5kehN/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1CSY1ONeeLrCgyewKnciude2y3lg5kehN&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -298,9 +298,9 @@ modelSpecs:
     - name: "mot_du_maire"
       label: "Communication - Générateur du mot du maire"
       description: "L'Assistant de Génération du Mot du Maire crée un texte personnalisé destiné à la population à partir de documents, notes vocales ou instructions fournies."
-      #iconURL: ""
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1zG7T4Wka0_Gh_ygZNdb43yBo_pItVGvz&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -317,9 +317,9 @@ modelSpecs:
     - name: "calendrier_obligations_municipales"
       label: "Direction - Calendrier des obligations municipales"
       description: "L'Assistant de calendrier des obligations municipales vous informe des actions obligatoires à effectuer ce mois-ci selon le Code municipal du Québec."
-      #iconURL: "https://drive.google.com/file/d/1AC_WD_WYo3zvCM3e-3EW7NwqZJXjwlS_/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1AC_WD_WYo3zvCM3e-3EW7NwqZJXjwlS_&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -336,9 +336,9 @@ modelSpecs:
     - name: "generateur_vision_strategique"
       label: "Direction - Générateur de vision stratégique"
       description: "L'Assistant générateur de vision stratégique vous aide à structurer et affiner votre vision en posant des questions, en proposant des idées et en s'inspirant des meilleures pratiques internationales."
-      #iconURL: "https://drive.google.com/file/d/1-E209VtOrG_bn2TdkQmHzfBB8mlOX4Ps/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1-E209VtOrG_bn2TdkQmHzfBB8mlOX4Ps&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -355,9 +355,9 @@ modelSpecs:
     #- name: "aide_subventions_municipales"
       #label: "Direction - Aide aux subventions municipales"
       #description: "L'Assistant d'aide aux subventions municipales vous aide à identifier les subventions auxquelles votre municipalité pourrait être éligible en fonction de votre projet."
-      #iconURL: "https://drive.google.com/file/d/15rcB4OzMf9-KnRf9Eo6j-3Hbl40zeUWg/view?usp=sharing"
-      #showIconInMenu: false
-      #showIconInHeader: false
+      #iconURL: "https://drive.google.com/thumbnail?id=15rcB4OzMf9-KnRf9Eo6j-3Hbl40zeUWg&sz=w100"
+      #showIconInMenu: true
+      #showIconInHeader: true
       #default: false
       #preset:
         #endpoint: "assistants"
@@ -374,9 +374,9 @@ modelSpecs:
     - name: "analyseur_risques_municipaux_personnalise"
       label: "Direction - Analyseur de risques municipaux personnalisé"
       description: "L'Assistant d'analyse des risques municipaux évalue les risques comptables, financiers et opérationnels d'une municipalité et génère un rapport personnalisé avec des recommandations adaptées."
-      #iconURL: "https://drive.google.com/file/d/1hN7Pbalpg1jc9W7pk2_lxU8WYqt7KsYT/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1hN7Pbalpg1jc9W7pk2_lxU8WYqt7KsYT&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -393,9 +393,9 @@ modelSpecs:
     - name: "conseiller_juridique_pour_dg_municipaux"
       label: "Direction - Conseiller juridique pour dg municipaux"
       description: "L'Assistant de conseil juridique municipal aide les directeurs généraux et greffiers à comprendre les droits, obligations et marges de manœuvre légales d'une Ville en fournissant des réponses juridiques précises avec des références détaillées."
-      #iconURL: "https://drive.google.com/file/d/19h80BKvwL17azJ_15q74pxG08iUs2E0t/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=19h80BKvwL17azJ_15q74pxG08iUs2E0t&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -412,9 +412,9 @@ modelSpecs:
     - name: "ecrire_analyser_demande_subvention"
       label: "Direction - Écrire/analyser une demande de subvention"
       description: "L'Assistant de rédaction de demandes de subvention génère des réponses adaptées aux formulaires de subvention en s'appuyant sur les informations fournies par l'utilisateur, tout en respectant les exigences spécifiques de chaque programme."
-      #iconURL: "https://drive.google.com/file/d/1tA-J5KuEwFeLWVHibj8BRVmEktipZ0vo/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1tA-J5KuEwFeLWVHibj8BRVmEktipZ0vo&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -431,9 +431,9 @@ modelSpecs:
     - name: "analyser_budgets_et_projections_financieres"
       label: "Finance - Analyser des budgets et projections financières"
       description: "L'Assistant de budgétisation et projections financières aide les responsables municipaux à analyser les budgets passés, générer des projections budgétaires et identifier des stratégies d'optimisation financière conformes aux réglementations québécoises et canadiennes."
-      #iconURL: "https://drive.google.com/file/d/1Ul43sV-1Xu1uHG9coVqwB5G1N7HIbBiH/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1Ul43sV-1Xu1uHG9coVqwB5G1N7HIbBiH&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -450,9 +450,9 @@ modelSpecs:
     - name: "generateur_prompts_standardises"
       label: "Général - Générateur de prompts standardisés"
       description: "L'Assistant générateur de prompt standardisé crée des prompts optimisés selon une méthode définie, en intégrant tous les paramètres nécessaires, que ce soit sous forme de texte ou de message vocal."
-      #iconURL: "https://drive.google.com/file/d/1Hu0MnVzbFmt-COeL1hzafe0_98CsArVg/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1Hu0MnVzbFmt-COeL1hzafe0_98CsArVg&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -469,9 +469,9 @@ modelSpecs:
     - name: "generateur_sommaire_executif"
       label: "Général - Générateur sommaire exécutif"
       description: "L'Assistant générateur de sommaire éxécutif synthétise les données clés d'un rapport consolidé municipal en un résumé clair, structuré et concis, permettant une compréhension rapide des points essentiels."
-      #iconURL: "https://drive.google.com/file/d/1UHTEDATlNE9mWjXShMhbFdaQ_ARog5WV/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1UHTEDATlNE9mWjXShMhbFdaQ_ARog5WV&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -488,9 +488,9 @@ modelSpecs:
     - name: "generer_comptes_rendus_reunion"
       label: "Général - Générer des comptes rendus de réunion"
       description: "L'Assistant de comptes rendus de réunion génère des comptes rendus précis, formels et structurés à partir de transcriptions, documents texte ou enregistrements audio, en s'adaptant au contexte professionnel et en garantissant la confidentialité."
-      #iconURL: "https://drive.google.com/file/d/1DtGQJNlOUcDh3aPbo4Jqt1YOwa6_R2bO/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1DtGQJNlOUcDh3aPbo4Jqt1YOwa6_R2bO&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -507,9 +507,9 @@ modelSpecs:
     - name: "createur_sommaires_decisionnels_municipaux"
       label: "Général - Créateur de sommaires décisionnels municipaux"
       description: "L'Assistant de rédaction de sommaires décisionnels municipaux structure et rédige des documents analytiques et persuasifs destinés aux instances décisionnelles municipales. "
-      #iconURL: "https://drive.google.com/file/d/138nuppdLd-xgLDKuHHVu1vtA43l5FozT/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=138nuppdLd-xgLDKuHHVu1vtA43l5FozT&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -526,9 +526,9 @@ modelSpecs:
     - name: "redacteur_resolutions_municipales"
       label: "Greffe - Rédacteur de résolutions municipales"
       description: "L'Assistant générateur de résolution municipale rédige des résolutions conformes aux standards municipaux à partir d'un document, d'une offre de service, d'un sommaire décisionnel ou d'une demande vocale."
-      #iconURL: "https://drive.google.com/file/d/1qJq7FQ8Z1bnI1g8toBqpl9yafkohtbEK/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1qJq7FQ8Z1bnI1g8toBqpl9yafkohtbEK&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         modelLabel: "Greffe - Rédacteur de résolutions municipales"
@@ -543,30 +543,30 @@ modelSpecs:
         assistant_id: "asst_tcNvsH0YEz8kQ9cu6csmN8lU"
         temperature: 1    
     #- name: "recherche_lois_municipales_comparatives"
-      #label: "Greffe - Recherche de lois municipales comparatives"
-      #description: "L'Assistant de recherche en droit municipal aide à identifier, analyser et structurer les lois municipales du Québec en tenant compte des distinctions entre le Code municipal et la Loi sur les cités et villes."
-      #iconURL: "https://drive.google.com/file/d/1_lHmyPQ9IpXaVh4isPOXRm3aoq-B5XZ7/view?usp=sharing"
-      #showIconInMenu: false
-      #showIconInHeader: false
-      #default: false
-      #preset:
-        #endpoint: "assistants"
-        #modelLabel: "Greffe - Recherche de lois municipales comparatives"
-        #model: "gpt-4o"
-        #greeting: "Je suis votre assistant juridique spécialisé en droit municipal du Québec. Vous souhaitez rédiger ou mettre à jour une loi locale ? Je peux vous aider à identifier des réglementations existantes, à trouver des références légales pertinentes et à structurer un tableau clair des meilleures pratiques adoptées par d'autres municipalités. Indiquez-moi si vous travaillez dans le cadre du Code municipal ou de la Loi sur les cités et villes, ainsi que la nature exacte de votre recherche, et je vous fournirai une analyse détaillée avec des liens vers les sources officielles. Prêt à démarrer ? Dites-moi ce dont vous avez besoin !"
-        #promptPrefix: ""
-        #resendFiles: false
-        #imageDetail: "auto"
-        #maxContextTokens: 128000
-        #max_tokens: 4096
-        #assistant_id: "asst_PbjYUrBUo0zQR65JRolCWu7g"
-        #temperature: 1
+    #  label: "Greffe - Recherche de lois municipales comparatives"
+    #  description: "L'Assistant de recherche en droit municipal aide à identifier, analyser et structurer les lois municipales du Québec en tenant compte des distinctions entre le Code municipal et la Loi sur les cités et villes."
+    #  iconURL: "https://drive.google.com/thumbnail?id=1_lHmyPQ9IpXaVh4isPOXRm3aoq-B5XZ7&sz=w100"
+    #  showIconInMenu: true
+    #  showIconInHeader: true
+    #  default: false
+    #  preset:
+    #    endpoint: "assistants"
+    #    modelLabel: "Greffe - Recherche de lois municipales comparatives"
+    #    model: "gpt-4o"
+    #    greeting: "Je suis votre assistant juridique spécialisé en droit municipal du Québec. Vous souhaitez rédiger ou mettre à jour une loi locale ? Je peux vous aider à identifier des réglementations existantes, à trouver des références légales pertinentes et à structurer un tableau clair des meilleures pratiques adoptées par d'autres municipalités. Indiquez-moi si vous travaillez dans le cadre du Code municipal ou de la Loi sur les cités et villes, ainsi que la nature exacte de votre recherche, et je vous fournirai une analyse détaillée avec des liens vers les sources officielles. Prêt à démarrer ? Dites-moi ce dont vous avez besoin !"
+    #    promptPrefix: ""
+    #    resendFiles: false
+    #    imageDetail: "auto"
+    #    maxContextTokens: 128000
+    #    max_tokens: 4096
+    #    assistant_id: "asst_PbjYUrBUo0zQR65JRolCWu7g"
+    #    temperature: 1
     - name: "conformite_legale_loi_sur_cites_et_villes"
       label: "Greffe - Conformité légale - loi sur les cités et villes"
       description: "L'Assistant de vérification de conformité à la loi C-19 compare les règlements municipaux locaux avec la Loi sur les cités et villes (Loi C-19) du Québec afin d'identifier toute divergence et de proposer des ajustements conformes."
-      #iconURL: "https://drive.google.com/file/d/1TwIH7E0HNv5xaAhxVpyJkZ__8dGYL4ZE/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1TwIH7E0HNv5xaAhxVpyJkZ__8dGYL4ZE&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -583,9 +583,9 @@ modelSpecs:
     - name: "conformite_legale_code_municipal_quebec"
       label: "Greffe - Conformité légale - code municipal du québec"
       description: "L'Assistant de vérification de conformité au code municipal du Québec compare les règlements municipaux locaux avec le Code municipal du Québec afin d'identifier toute divergence et de proposer des ajustements conformes."
-      #iconURL: "https://drive.google.com/file/d/1E6_ZI6rgkzgvt-P2tF7w8av3DXYIHiGg/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1E6_ZI6rgkzgvt-P2tF7w8av3DXYIHiGg&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -602,9 +602,9 @@ modelSpecs:
     - name: "agent_analyse_jurisprudence"
       label: "Greffe - Agent d'analyse de jurisprudence"
       description: "L'Assistant d'analyse et de résumé de jurisprudence génère des résumés standardisés de décisions juridiques volumineuses, en mettant en avant les faits clés, les argumentaires des parties et la justification de la décision finale."
-      #iconURL: "https://drive.google.com/file/d/1iUb73VbkFFA7kbDYuq_oeMOwcACC0AUq/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1iUb73VbkFFA7kbDYuq_oeMOwcACC0AUq&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -621,9 +621,9 @@ modelSpecs:
     - name: "comparateur_reglement_municipaux"
       label: "Greffe - Comparateur des règlements municipaux"
       description: "L'Assistant de Comparaison de Règlements Municipaux compare les réglementations d'une municipalité avec celles d'autres villes pour en identifier les points forts, les faiblesses et proposer des pistes d'amélioration."
-      #iconURL: "https://drive.google.com/file/d/1iUb73VbkFFA7kbDYuq_oeMOwcACC0AUq/view?usp=sharing" #TODO Change Icon URL
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1iMLWHtxM3sJTKzsLsgThondZFSVjgm0-&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -640,9 +640,9 @@ modelSpecs:
     - name: "politique_interne_ia"
       label: "Greffe - Générateur de politique interne sur l'utilisation de l'IA"
       description: " L'Assistant de Génération de Politique Interne d'Utilisation de l'Intelligence Artificielle accompagne les utilisateurs dans la création d'une politique adaptée à leur organisation. Ce processus structuré étape par étape permet de choisir, personnaliser et rédiger chaque section de la politique avec des suggestions guidées et des options prédéfinies."
-      #iconURL: "https://drive.google.com/file/d/1iUb73VbkFFA7kbDYuq_oeMOwcACC0AUq/view?usp=sharing" #TODO Change Icon URL
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1Y2jjdbf6jf4bNYmfs9NhewO3IWE0-guY&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -659,9 +659,9 @@ modelSpecs:
     - name: "generation_rapports_evenements"
       label: "Loisirs - Génération de rapports d'évènements"
       description: "L'Assistant de rédaction de rapports d'événements guide les membres de l'équipe des loisirs de la municipalité dans la complétion des rapports post-événements en suivant un format structuré et en garantissant la clarté et la cohérence du document final."
-      #iconURL: "https://drive.google.com/file/d/1Tt9kH2j3dufXRl7cQM1-XbJNgNuX1jnS/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1Tt9kH2j3dufXRl7cQM1-XbJNgNuX1jnS&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -678,9 +678,9 @@ modelSpecs:
     - name: "adapteur_mesures_preparation_sinistres"
       label: "Service incendie - Adapteur de mesures de préparation aux sinistres"
       description: "L'Assistant d'adaptation des plans de mesures d'urgence ajuste ou crée les plans génériques aux besoins spécifiques des municipalités québécoises, en tenant compte des infrastructures critiques, des risques locaux et des priorités d'intervention."
-      #iconURL: "https://drive.google.com/file/d/17LIcQ3hk9TWpyHwyjwHVmn7MNaXt5mNG/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=17LIcQ3hk9TWpyHwyjwHVmn7MNaXt5mNG&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -697,9 +697,9 @@ modelSpecs:
     - name: "verification_demandes_permis"
       label: "Travaux publics - Vérification des demandes de permis"
       description: "L'Assistant de vérification des demandes de permis analyse les demandes de permis de construction pour déterminer si elles sont complètes ou nécessitent des corrections avant de passer à l'étape suivante."
-      #iconURL: "https://drive.google.com/file/d/1qVGFL44-TDuieBGFGkWD9ZxyABXTjVx8/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1qVGFL44-TDuieBGFGkWD9ZxyABXTjVx8&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -716,9 +716,9 @@ modelSpecs:
     - name: "assistant_evaluation_appels_offres"
       label: "Travaux publics - Assistant d'évaluation d'appels d'offres"
       description: "L'Assistant d'évaluation des appels d'offres municipaux guide l'utilisateur étape par étape dans l'analyse et la notation des soumissions en validant chaque critère avant de passer à l'étape suivante."
-      #iconURL: "https://drive.google.com/file/d/1JExy60UnGay23v-c5giOHj01Nw4fmmt9/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1JExy60UnGay23v-c5giOHj01Nw4fmmt9&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
@@ -735,9 +735,9 @@ modelSpecs:
     - name: "creation_grilles_analyse_appels_offres"
       label: "Travaux publics - Création de grilles d'analyse d'appels d'offres"
       description: "L'Assistant de création de grilles d'analyse d'appels d'offres municipaux aide à structurer et personnaliser les grilles d'évaluation et de correction des appels d'offres publics en respectant les standards légaux et les recommandations officielles."
-      #iconURL: "https://drive.google.com/file/d/1-JErHO_pBJ8ZYTrSKpvC04DSwPlHBVJ4/view?usp=sharing"
-      showIconInMenu: false
-      showIconInHeader: false
+      iconURL: "https://drive.google.com/thumbnail?id=1-JErHO_pBJ8ZYTrSKpvC04DSwPlHBVJ4&sz=w100"
+      showIconInMenu: true
+      showIconInHeader: true
       default: false
       preset:
         endpoint: "assistants"
