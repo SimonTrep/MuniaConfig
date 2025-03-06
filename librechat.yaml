@@ -276,6 +276,24 @@ modelSpecs:
   enforce: false
   prioritize: false
   list:
+    - name: "chat_gpt"
+      label: "OpenAI"
+      description: "Assistant fournissant des réponses rapides pour tous les sujets."
+      iconURL: ""
+      showIconInMenu: true
+      showIconInHeader: true
+      default: true
+      preset:
+        endpoint: "openAI"
+        modelLabel: "GPT - Réponses rapides"
+        model: "gpt-4o"
+        greeting: ""
+        promptPrefix: ""
+        resendFiles: false
+        imageDetail: "auto"
+        maxContextTokens: 128000
+        max_tokens: 4096
+        temperature: 1
     - name: "generateur_post_facebook"
       label: "Communication - Générateur de post facebook"
       description: "L'Assistant de génération de publications Facebook crée trois versions distinctes de publications optimisées pour les citoyens d'une municipalité, en s'adaptant au style des communications existantes pour maximiser l'engagement."
