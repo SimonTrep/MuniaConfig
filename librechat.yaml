@@ -544,7 +544,7 @@ modelSpecs:
     - name: "redacteur_resolutions_municipales"
       label: "Greffe - Rédacteur de résolutions municipales"
       description: "L'Assistant générateur de résolution municipale rédige des résolutions conformes aux standards municipaux à partir d'un document, d'une offre de service, d'un sommaire décisionnel ou d'une demande vocale."
-      iconURL: "https://drive.google.com/thumbnail?id=1qJq7FQ8Z1bnI1g8toBqpl9yafkohtbEK&sz=w100"
+      iconURL: "https://drive.google.com/thumbnail?id=15rcB4OzMf9-KnRf9Eo6j-3Hbl40zeUWg&sz=w100"
       showIconInMenu: true
       showIconInHeader: true
       default: false
