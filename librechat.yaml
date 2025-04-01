@@ -187,7 +187,7 @@ endpoints:
       modelDisplayLabel: "Cohere (Canadien)"
       titleModel: "command-r"
       dropParams: ["stop", "user", "frequency_penalty", "presence_penalty", "temperature", "top_p"]
-    - name: "Perplexity"
+    - name: "perplexity"
       apiKey: "${PERPLEXITY_API_KEY}"
       baseURL: "https://api.perplexity.ai/"
       models:
@@ -206,7 +206,7 @@ endpoints:
       summaryModel: "sonar"
       forcePrompt: false
       dropParams: ["stop", "frequency_penalty"]
-      modelDisplayLabel: "Perplexity"
+      modelDisplayLabel: "Perplexity (Recherche Web)"
   #   # Groq Example
   #   - name: 'groq'
   #     apiKey: '${GROQ_API_KEY}'
