@@ -2,7 +2,7 @@
 # https://www.librechat.ai/docs/configuration/librechat_yaml
 
 # Configuration version (required)
-version: 1.2.1
+version: 1.2.3
 
 # Cache settings: Set to true to enable caching
 cache: true
@@ -59,7 +59,7 @@ interface:
 
   endpointsMenu: true
   modelSelect: true
-  parameters: true
+  parameters: false
   sidePanel: true
   presets: false
   prompts: true
@@ -140,8 +140,30 @@ endpoints:
   #   pollIntervalMs: 3000  # Polling interval for checking assistant updates
   #   timeoutMs: 180000  # Timeout for assistant operations
   #   # Should only be one or the other, either `supportedIds` or `excludedIds`
-  #   supportedIds: ["asst_supportedAssistantId1", "asst_supportedAssistantId2"]
-  #   # excludedIds: ["asst_excludedAssistantId"]
+    supportedIds: ["asst_iEZG3SNLVwD3sywIxgIOIqBU",
+                  "asst_Z07pdUjgCNfOIwk2R6c5i5ky",
+                  "asst_bwQGFMrfjRVSTyIUuV96iykS",
+                  "asst_a0r0dmthhu4FEO8Xa9KlHeHg",
+                  "asst_vqqeyPhZw3ONZVNPB6hFfovt",
+                  "asst_zo6aqZG6kTGdoaGCfVU5kAFX",
+                  "asst_2T4kYO1RL2Xa4pA2JspVHprh",
+                  "asst_caERV9UYedA4FjKeeTMkxbxv",
+                  "asst_8YGVwDJJaTqbjVRKfaDLtMtT",
+                  "asst_v9n6wskfJTDnjVZqIVJuTr9X",
+                  "asst_ftPfGaaMJXV3A1nlPXD03WEq",
+                  "asst_47PpLJmTArQbYWvkHSGeGv5N",
+                  "asst_tcNvsH0YEz8kQ9cu6csmN8lU",
+                  "asst_RmXz3PRxBizfLEuwSAdcopa4",
+                  "asst_mlxbIIeOE7URa7IEZKoy7Jol",
+                  "asst_w4xq2KDMvN6EHzWAx7ouNiRr",
+                  "asst_AOiY4DPXyADK1aVbTacy15qW",
+                  "asst_jFfJ21WxrDq9v6vSqcZsoCea",
+                  "asst_hBUC3XSTsK29jhEPlLn09bak",
+                  "asst_UMN6GzKcRP0WsOmKGA5Xg8ec",
+                  "asst_wSuew6LyxUMnY741a6DXxisH",
+                  "asst_GgKb5TbADLXlmRFmnzl3tTom",
+                  "asst_Cxkotdnnhc4NeOOyKEoWeaDb"]
+  #  excludedIds: ["asst_PbjYUrBUo0zQR65JRolCWu7g","asst_IgzEGoyucht3V8cFyQLwniOv"]
   #   Only show assistants that the user created or that were created externally (e.g. in Assistants playground).
   #   # privateAssistants: false # Does not work with `supportedIds` or `excludedIds`
   #   # (optional) Models that support retrieval, will default to latest known OpenAI models that support the feature
@@ -155,7 +177,36 @@ endpoints:
   #   disableBuilder: false
   #   (optional) Agent Capabilities available to all users. Omit the ones you wish to exclude. Defaults to list below.
   #   capabilities: ["execute_code", "file_search", "actions", "tools"]
-  # custom:
+  custom:
+    - name: "cohere"
+      apiKey: "${COHERE_API_KEY}"
+      baseURL: "https://api.cohere.ai/v1"
+      models:
+        default: ["command-r"] #,"command-r-plus","command-light","command-light-nightly","command","command-nightly"
+        fetch: false
+      modelDisplayLabel: "Cohere (Canadien)"
+      titleModel: "command-r"
+      dropParams: ["stop", "user", "frequency_penalty", "presence_penalty", "temperature", "top_p"]
+    - name: "Perplexity"
+      apiKey: "${PERPLEXITY_API_KEY}"
+      baseURL: "https://api.perplexity.ai/"
+      models:
+        default: [
+#          "sonar-deep-research",
+#          "sonar-reasoning-pro",
+#          "sonar-reasoning",
+#          "sonar-pro",
+          "sonar"
+#          "r1-1776"
+          ]
+        fetch: false # fetching list of models is not supported
+      titleConvo: true
+      titleModel: "sonar"
+      summarize: false
+      summaryModel: "sonar"
+      forcePrompt: false
+      dropParams: ["stop", "frequency_penalty"]
+      modelDisplayLabel: "Perplexity"
   #   # Groq Example
   #   - name: 'groq'
   #     apiKey: '${GROQ_API_KEY}'
@@ -272,501 +323,4 @@ fileConfig:
   avatarSizeLimit: 5  # Limit for user avatar image size in MB
 # See the Custom Configuration Guide for more information on Assistants Config:
 # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
-modelSpecs:
-  enforce: false
-  prioritize: false
-  list:
-    - name: "chat_gpt"
-      label: "OpenAI"
-      description: "Assistant fournissant des réponses rapides pour tous les sujets."
-      iconURL: ""
-      showIconInMenu: true
-      showIconInHeader: true
-      default: true
-      preset:
-        endpoint: "openAI"
-        modelLabel: "GPT - Réponses rapides"
-        model: "gpt-4o"
-        greeting: ""
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        temperature: 1
-    - name: "generateur_post_facebook"
-      label: "Communication - Générateur de post facebook"
-      description: "L'Assistant de génération de publications Facebook crée trois versions distinctes de publications optimisées pour les citoyens d'une municipalité, en s'adaptant au style des communications existantes pour maximiser l'engagement."
-      iconURL: "https://drive.google.com/thumbnail?id=1CSY1ONeeLrCgyewKnciude2y3lg5kehN&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Communication - Générateur de post facebook"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant dédié à la création de publications Facebook engageantes pour votre municipalité. Vous pouvez me fournir un texte, une note vocale ou des informations clés sur une initiative, et je vous proposerai trois versions adaptées pour capter l'attention des citoyens. Mon objectif est de maximiser l'interaction avec un ton convivial, informatif et aligné avec les communications de la municipalité. Prêt à rédiger une publication ?"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_iEZG3SNLVwD3sywIxgIOIqBU"
-        temperature: 1
-    - name: "mot_du_maire"
-      label: "Communication - Générateur du mot du maire"
-      description: "L'Assistant de Génération du Mot du Maire crée un texte personnalisé destiné à la population à partir de documents, notes vocales ou instructions fournies."
-      iconURL: "https://drive.google.com/thumbnail?id=1zG7T4Wka0_Gh_ygZNdb43yBo_pItVGvz&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Communication - Générateur du mot du maire"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant pour la rédaction du mot du maire. Vous pouvez me fournir des documents, des notes ou des messages vocaux, et je rédigerai un texte clair et engageant pour votre population. Le mot sera personnalisé et structuré pour vos publications mensuelles. N'hésitez pas à y ajouter votre touche personnelle avant de le publier. Prêt à commencer ? Partagez vos informations clés, et je m'occupe du reste !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_Z07pdUjgCNfOIwk2R6c5i5ky"
-        temperature: 1
-    - name: "calendrier_obligations_municipales"
-      label: "Direction - Calendrier des obligations municipales"
-      description: "L'Assistant de calendrier des obligations municipales vous informe des actions obligatoires à effectuer ce mois-ci selon le Code municipal du Québec."
-      iconURL: "https://drive.google.com/thumbnail?id=1AC_WD_WYo3zvCM3e-3EW7NwqZJXjwlS_&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Direction - Calendrier des obligations municipales"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant dédié aux obligations municipales. Posez-moi vos questions pour savoir quelles actions votre municipalité doit accomplir ce mois-ci selon le Code municipal du Québec. J'ai accès aux dernières mises à jour légales et je peux vous aider à ne rien oublier. Demandez-moi simplement : « Quelles obligations avons-nous ce mois-ci ? » ou « Devons-nous déposer un rapport ce mois-ci ? ». Je suis là pour vous guider !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_bwQGFMrfjRVSTyIUuV96iykS"
-        temperature: 1
-    - name: "generateur_vision_strategique"
-      label: "Direction - Générateur de vision stratégique"
-      description: "L'Assistant générateur de vision stratégique vous aide à structurer et affiner votre vision en posant des questions, en proposant des idées et en s'inspirant des meilleures pratiques internationales."
-      iconURL: "https://drive.google.com/thumbnail?id=1-E209VtOrG_bn2TdkQmHzfBB8mlOX4Ps&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Direction - Générateur de vision stratégique"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant dédié à la réflexion stratégique. Vous pouvez me partager vos idées actuelles, un document existant ou simplement démarrer une discussion ouverte. Je vous aiderai à structurer votre vision, à explorer de nouvelles opportunités et à vous inspirer de stratégies internationales. Posez-moi vos questions ou laissez-moi vous guider avec des suggestions !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_a0r0dmthhu4FEO8Xa9KlHeHg"
-        temperature: 1
-    #- name: "aide_subventions_municipales"
-      #label: "Direction - Aide aux subventions municipales"
-      #description: "L'Assistant d'aide aux subventions municipales vous aide à identifier les subventions auxquelles votre municipalité pourrait être éligible en fonction de votre projet."
-      #iconURL: "https://drive.google.com/thumbnail?id=15rcB4OzMf9-KnRf9Eo6j-3Hbl40zeUWg&sz=w100"
-      #showIconInMenu: true
-      #showIconInHeader: true
-      #default: false
-      #preset:
-        #endpoint: "assistants"
-        #modelLabel: "Direction - Aide aux subventions municipales"
-        #model: "o3-mini"
-        #greeting: "Je suis votre assistant pour vous aider à trouver des subventions municipales adaptées à votre projet. Dites-moi ce que vous souhaitez accomplir, et je vous proposerai des subventions potentielles. Pour de meilleurs résultats, n'hésitez pas à interagir avec moi plusieurs fois afin d'affiner la recherche. Une fois une subvention identifiée, il est important de vérifier directement sur les sites web officiels pour confirmer les critères et modalités. Posez-moi vos questions et commençons ensemble votre recherche !"
-        #promptPrefix: ""
-        #resendFiles: false
-        #imageDetail: "auto"
-        #maxContextTokens: 128000
-        #max_tokens: 4096
-        #assistant_id: "asst_IgzEGoyucht3V8cFyQLwniOv"
-        #temperature: 1
-    - name: "analyseur_risques_municipaux_personnalise"
-      label: "Direction - Analyseur de risques municipaux personnalisé"
-      description: "L'Assistant d'analyse des risques municipaux évalue les risques comptables, financiers et opérationnels d'une municipalité et génère un rapport personnalisé avec des recommandations adaptées."
-      iconURL: "https://drive.google.com/thumbnail?id=1hN7Pbalpg1jc9W7pk2_lxU8WYqt7KsYT&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Direction - Analyseur de risques municipaux personnalisé"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant expert en analyse des risques municipaux. Partagez-moi vos documents, courriels ou messages, et je vous fournirai un rapport structuré identifiant les risques financiers, opérationnels et stratégiques. J'analyse les informations en suivant une méthodologie rigoureuse et je m'adapte à vos besoins spécifiques pour vous proposer des recommandations adaptées. Besoin d'un format particulier ? Faites-le-moi savoir et je personnaliserai mon analyse. Prêt à évaluer les risques ? Démarrons ensemble !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_vqqeyPhZw3ONZVNPB6hFfovt"
-        temperature: 1
-    - name: "conseiller_juridique_pour_dg_municipaux"
-      label: "Direction - Conseiller juridique pour dg municipaux"
-      description: "L'Assistant de conseil juridique municipal aide les directeurs généraux et greffiers à comprendre les droits, obligations et marges de manœuvre légales d'une Ville en fournissant des réponses juridiques précises avec des références détaillées."
-      iconURL: "https://drive.google.com/thumbnail?id=19h80BKvwL17azJ_15q74pxG08iUs2E0t&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Direction - Conseiller juridique pour dg municipaux"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant spécialisé en droit municipal. Mon rôle est de vous fournir des réponses juridiques précises, basées sur les lois applicables, afin de vous aider à comprendre vos obligations et marges de manœuvre. Pour garantir une réponse adaptée, je vais d'abord vous poser quelques questions de clarification. Ensuite, je vous fournirai les références légales pertinentes accompagnées d'explications détaillées. Dites-moi votre situation et commençons ensemble l'analyse juridique !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_zo6aqZG6kTGdoaGCfVU5kAFX"
-        temperature: 1
-    - name: "ecrire_analyser_demande_subvention"
-      label: "Direction - Écrire/analyser une demande de subvention"
-      description: "L'Assistant de rédaction de demandes de subvention génère des réponses adaptées aux formulaires de subvention en s'appuyant sur les informations fournies par l'utilisateur, tout en respectant les exigences spécifiques de chaque programme."
-      iconURL: "https://drive.google.com/thumbnail?id=1tA-J5KuEwFeLWVHibj8BRVmEktipZ0vo&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Direction - Écrire/analyser une demande de subvention"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant spécialisé dans la rédaction de demandes de subvention. Mon rôle est de vous aider à structurer et formuler des réponses claires, précises et adaptées aux exigences des formulaires de subvention québécois et canadiens. Vous pouvez me fournir les questions du formulaire ainsi que les informations pertinentes, et je structurerai des réponses optimisées. Chaque réponse sera validée avec vous avant de passer à l'étape suivante. Prêt à commencer ?"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_2T4kYO1RL2Xa4pA2JspVHprh"
-        temperature: 1 
-    - name: "analyser_budgets_et_projections_financieres"
-      label: "Finance - Analyser des budgets et projections financières"
-      description: "L'Assistant de budgétisation et projections financières aide les responsables municipaux à analyser les budgets passés, générer des projections budgétaires et identifier des stratégies d'optimisation financière conformes aux réglementations québécoises et canadiennes."
-      iconURL: "https://drive.google.com/thumbnail?id=1Ul43sV-1Xu1uHG9coVqwB5G1N7HIbBiH&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Finance - Analyser des budgets et projections financières"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant dédié à l'analyse budgétaire et aux projections financières pour votre municipalité. Mon rôle est d'examiner vos budgets passés, de comparer les tendances, de générer des prévisions et de proposer des recommandations stratégiques pour optimiser vos finances. Vous pouvez me fournir vos fichiers (Excel, CSV, Word ou PDF), et je vous guiderai étape par étape en validant chaque action avant de poursuivre. Prêt à commencer l'analyse ?"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_caERV9UYedA4FjKeeTMkxbxv"
-        temperature: 1   
-    - name: "generateur_prompts_standardises"
-      label: "Général - Générateur de prompts standardisés"
-      description: "L'Assistant générateur de prompt standardisé crée des prompts optimisés selon une méthode définie, en intégrant tous les paramètres nécessaires, que ce soit sous forme de texte ou de message vocal."
-      iconURL: "https://drive.google.com/thumbnail?id=1Hu0MnVzbFmt-COeL1hzafe0_98CsArVg&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Général - Générateur de prompts standardisés"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant pour générer des prompts standardisés et optimisés selon la méthode de votre choix. Fournissez-moi vos besoins et je structurerai un prompt complet avec tous les paramètres nécessaires. Vous pouvez interagir avec moi par texte ou par message vocal pour plus de fluidité. Dites-moi simplement ce que vous voulez accomplir, et je vous fournirai un prompt prêt à l'emploi !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_8YGVwDJJaTqbjVRKfaDLtMtT"
-        temperature: 1
-    - name: "generateur_sommaire_executif"
-      label: "Général - Générateur sommaire exécutif"
-      description: "L'Assistant générateur de sommaire éxécutif synthétise les données clés d'un rapport consolidé municipal en un résumé clair, structuré et concis, permettant une compréhension rapide des points essentiels."
-      iconURL: "https://drive.google.com/thumbnail?id=1UHTEDATlNE9mWjXShMhbFdaQ_ARog5WV&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Général - Générateur sommaire exécutif"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant spécialisé dans la rédaction de sommaires exécutifs pour les rapports municipaux consolidés. Mon rôle est d'extraire les informations essentielles et de les structurer en un résumé clair et concis. Le sommaire exécutif tiendra sur une page et suivra une structure standard : introduction, faits saillants, analyses principales, conclusions et recommandations. Fournissez-moi votre rapport consolidé, et je vous fournirai un sommaire prêt à être utilisé !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_v9n6wskfJTDnjVZqIVJuTr9X"
-        temperature: 1
-    - name: "generer_comptes_rendus_reunion"
-      label: "Général - Générer des comptes rendus de réunion"
-      description: "L'Assistant de comptes rendus de réunion génère des comptes rendus précis, formels et structurés à partir de transcriptions, documents texte ou enregistrements audio, en s'adaptant au contexte professionnel et en garantissant la confidentialité."
-      iconURL: "https://drive.google.com/thumbnail?id=1DtGQJNlOUcDh3aPbo4Jqt1YOwa6_R2bO&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Général - Générer des comptes rendus de réunion"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant dédié à la création de comptes rendus de réunion. Vous pouvez me fournir une transcription, un fichier audio ou un document texte, et je structurerai un compte rendu clair et professionnel. J'inclurai les points discutés, les décisions prises, les actions à entreprendre et les participants. Si vous étiez présent à la réunion, je peux personnaliser le contenu en intégrant des actions spécifiques pour vous. Je valide chaque étape avec vous avant de poursuivre pour garantir un résultat précis et exploitable. Prêt à commencer ?"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_ftPfGaaMJXV3A1nlPXD03WEq"
-        temperature: 1
-    - name: "createur_sommaires_decisionnels_municipaux"
-      label: "Général - Créateur de sommaires décisionnels municipaux"
-      description: "L'Assistant de rédaction de sommaires décisionnels municipaux structure et rédige des documents analytiques et persuasifs destinés aux instances décisionnelles municipales. "
-      iconURL: "https://drive.google.com/thumbnail?id=138nuppdLd-xgLDKuHHVu1vtA43l5FozT&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Général - Créateur de sommaires décisionnels municipaux"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant spécialisé dans la rédaction de sommaires décisionnels municipaux. Mon objectif est de structurer un argumentaire clair et convaincant pour aider les décideurs à prendre des décisions éclairées. Vous pouvez me fournir un document existant ou répondre à quelques questions, et je structurerai un sommaire décisionnel comprenant une analyse détaillée, des comparaisons et des recommandations étayées par des données fiables. Je peux également effectuer des recherches en ligne pour renforcer les arguments. Prêt à commencer ?"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_47PpLJmTArQbYWvkHSGeGv5N"
-        temperature: 1
-    - name: "redacteur_resolutions_municipales"
-      label: "Greffe - Rédacteur de résolutions municipales"
-      description: "L'Assistant générateur de résolution municipale rédige des résolutions conformes aux standards municipaux à partir d'un document, d'une offre de service, d'un sommaire décisionnel ou d'une demande vocale."
-      iconURL: "https://drive.google.com/thumbnail?id=15rcB4OzMf9-KnRf9Eo6j-3Hbl40zeUWg&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        modelLabel: "Greffe - Rédacteur de résolutions municipales"
-        endpoint: "assistants"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant pour générer des résolutions municipales conformes aux standards en vigueur. Fournissez-moi un document, une offre de service, un sommaire décisionnel ou dictez-moi votre besoin par message vocal, et je vous fournirai une première version de votre résolution. Besoin d'un ajustement ? Je peux affiner le texte selon vos préférences. Dites-moi ce dont vous avez besoin et je m'occupe du reste !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_tcNvsH0YEz8kQ9cu6csmN8lU"
-        temperature: 1    
-    #- name: "recherche_lois_municipales_comparatives"
-    #  label: "Greffe - Recherche de lois municipales comparatives"
-    #  description: "L'Assistant de recherche en droit municipal aide à identifier, analyser et structurer les lois municipales du Québec en tenant compte des distinctions entre le Code municipal et la Loi sur les cités et villes."
-    #  iconURL: "https://drive.google.com/thumbnail?id=1_lHmyPQ9IpXaVh4isPOXRm3aoq-B5XZ7&sz=w100"
-    #  showIconInMenu: true
-    #  showIconInHeader: true
-    #  default: false
-    #  preset:
-    #    endpoint: "assistants"
-    #    modelLabel: "Greffe - Recherche de lois municipales comparatives"
-    #    model: "gpt-4o"
-    #    greeting: "Je suis votre assistant juridique spécialisé en droit municipal du Québec. Vous souhaitez rédiger ou mettre à jour une loi locale ? Je peux vous aider à identifier des réglementations existantes, à trouver des références légales pertinentes et à structurer un tableau clair des meilleures pratiques adoptées par d'autres municipalités. Indiquez-moi si vous travaillez dans le cadre du Code municipal ou de la Loi sur les cités et villes, ainsi que la nature exacte de votre recherche, et je vous fournirai une analyse détaillée avec des liens vers les sources officielles. Prêt à démarrer ? Dites-moi ce dont vous avez besoin !"
-    #    promptPrefix: ""
-    #    resendFiles: false
-    #    imageDetail: "auto"
-    #    maxContextTokens: 128000
-    #    max_tokens: 4096
-    #    assistant_id: "asst_PbjYUrBUo0zQR65JRolCWu7g"
-    #    temperature: 1
-    - name: "conformite_legale_loi_sur_cites_et_villes"
-      label: "Greffe - Conformité légale - loi sur les cités et villes"
-      description: "L'Assistant de vérification de conformité à la loi C-19 compare les règlements municipaux locaux avec la Loi sur les cités et villes (Loi C-19) du Québec afin d'identifier toute divergence et de proposer des ajustements conformes."
-      iconURL: "https://drive.google.com/thumbnail?id=1TwIH7E0HNv5xaAhxVpyJkZ__8dGYL4ZE&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Greffe - Conformité légale - loi sur les cités et villes"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant spécialisé en conformité municipale avec la Loi C-19 du Québec. Mon rôle est d'analyser les règlements municipaux que vous me fournissez, de les comparer aux dispositions légales applicables et d'identifier toute divergence. Je vous fournirai un rapport détaillé avec des recommandations précises pour assurer la conformité de vos règlements. Fournissez-moi vos documents, et nous commencerons ensemble l'analyse juridique !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_RmXz3PRxBizfLEuwSAdcopa4"
-        temperature: 1
-    - name: "conformite_legale_code_municipal_quebec"
-      label: "Greffe - Conformité légale - code municipal du québec"
-      description: "L'Assistant de vérification de conformité au code municipal du Québec compare les règlements municipaux locaux avec le Code municipal du Québec afin d'identifier toute divergence et de proposer des ajustements conformes."
-      iconURL: "https://drive.google.com/thumbnail?id=1E6_ZI6rgkzgvt-P2tF7w8av3DXYIHiGg&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Greffe - Conformité légale - code municipal du québec"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant spécialisé en conformité municipale avec le Code municipal du Québec. Mon rôle est d'analyser les règlements municipaux que vous me fournissez, de les comparer aux dispositions légales applicables et d'identifier toute divergence. Je vous fournirai un rapport détaillé avec des recommandations précises pour assurer la conformité de vos règlements. Fournissez-moi vos documents et nous commencerons ensemble l'analyse juridique !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_mlxbIIeOE7URa7IEZKoy7Jol"
-        temperature: 1
-    - name: "agent_analyse_jurisprudence"
-      label: "Greffe - Agent d'analyse de jurisprudence"
-      description: "L'Assistant d'analyse et de résumé de jurisprudence génère des résumés standardisés de décisions juridiques volumineuses, en mettant en avant les faits clés, les argumentaires des parties et la justification de la décision finale."
-      iconURL: "https://drive.google.com/thumbnail?id=1iUb73VbkFFA7kbDYuq_oeMOwcACC0AUq&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Greffe - Agent d'analyse de jurisprudence"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant spécialisé en analyse et résumé de jurisprudence. Mon rôle est de vous aider à synthétiser rapidement des décisions juridiques volumineuses en un résumé clair et structuré. J'extrais les faits principaux, les arguments des parties, la décision rendue et ses justifications. Chaque résumé suit une structure standardisée pour vous permettre une analyse efficace. Fournissez-moi une décision juridique, et je vous fournirai un résumé prêt à l'emploi !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_w4xq2KDMvN6EHzWAx7ouNiRr"
-        temperature: 1
-    - name: "comparateur_reglement_municipaux"
-      label: "Greffe - Comparateur des règlements municipaux"
-      description: "L'Assistant de Comparaison de Règlements Municipaux compare les réglementations d'une municipalité avec celles d'autres villes pour en identifier les points forts, les faiblesses et proposer des pistes d'amélioration."
-      iconURL: "https://drive.google.com/thumbnail?id=1iMLWHtxM3sJTKzsLsgThondZFSVjgm0-&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Greffe - Comparateur des règlements municipaux"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant spécialisé dans la comparaison et l'analyse de règlements municipaux. Mon rôle est de comparer vos réglementations avec celles d'autres municipalités pour vous aider à améliorer vos politiques locales. Vous pouvez me fournir un ou plusieurs documents, et je vous indiquerai les similitudes, différences, points forts et faiblesses, ainsi que des suggestions d'amélioration. Utilisons ensemble les meilleures pratiques pour perfectionner vos règlements municipaux. Prêt à commencer ?"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_AOiY4DPXyADK1aVbTacy15qW"
-        temperature: 1
-    - name: "politique_interne_ia"
-      label: "Greffe - Générateur de politique interne sur l'utilisation de l'IA"
-      description: " L'Assistant de Génération de Politique Interne d'Utilisation de l'Intelligence Artificielle accompagne les utilisateurs dans la création d'une politique adaptée à leur organisation. Ce processus structuré étape par étape permet de choisir, personnaliser et rédiger chaque section de la politique avec des suggestions guidées et des options prédéfinies."
-      iconURL: "https://drive.google.com/thumbnail?id=1Y2jjdbf6jf4bNYmfs9NhewO3IWE0-guY&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Greffe - Générateur de politique interne sur l'utilisation de l'IA"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant dédié à la création de votre politique interne sur l'utilisation de l'intelligence artificielle (IA). Mon rôle est de vous guider étape par étape pour rédiger une politique claire et personnalisée. Vous pouvez suivre mes suggestions ou personnaliser chaque section selon vos besoins. À chaque étape, je vous présenterai des options pour structurer votre document de manière cohérente et conforme aux meilleures pratiques. Prêt à commencer ?"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_jFfJ21WxrDq9v6vSqcZsoCea"
-        temperature: 1
-    - name: "generation_rapports_evenements"
-      label: "Loisirs - Génération de rapports d'évènements"
-      description: "L'Assistant de rédaction de rapports d'événements guide les membres de l'équipe des loisirs de la municipalité dans la complétion des rapports post-événements en suivant un format structuré et en garantissant la clarté et la cohérence du document final."
-      iconURL: "https://drive.google.com/thumbnail?id=1Tt9kH2j3dufXRl7cQM1-XbJNgNuX1jnS&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Loisirs - Génération de rapports d'évènements"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant dédié à la rédaction des rapports d'événements municipaux. Mon rôle est de vous accompagner dans la complétion du rapport en suivant les sections standardisées : critères de qualité, conclusion et recommandations, ainsi que les informations de coordination. Je poserai des questions étape par étape pour m'assurer que chaque section est remplie avec précision et conformité. Vous pouvez me fournir un modèle vierge ou un exemple déjà rempli, et je structurerai le rapport final pour vous. Prêt à commencer ?"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_hBUC3XSTsK29jhEPlLn09bak"
-        temperature: 1
-    - name: "adapteur_mesures_preparation_sinistres"
-      label: "Service incendie - Adapteur de mesures de préparation aux sinistres"
-      description: "L'Assistant d'adaptation des plans de mesures d'urgence ajuste ou crée les plans génériques aux besoins spécifiques des municipalités québécoises, en tenant compte des infrastructures critiques, des risques locaux et des priorités d'intervention."
-      iconURL: "https://drive.google.com/thumbnail?id=17LIcQ3hk9TWpyHwyjwHVmn7MNaXt5mNG&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Service incendie - Adapteur de mesures de préparation aux sinistres"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant spécialisé dans l'adaptation des plans de mesures d'urgence municipaux. Mon rôle est d'ajuster un plan générique aux besoins spécifiques de votre municipalité en intégrant les particularités locales, les infrastructures critiques et les types de catastrophes les plus probables. Je procède étape par étape et valide chaque modification avec vous pour garantir un document optimisé et exploitable. Fournissez-moi votre plan existant ou vos besoins spécifiques, et nous travaillerons ensemble à un document clair, structuré et personnalisé. Prêt à commencer ?"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_UMN6GzKcRP0WsOmKGA5Xg8ec"
-        temperature: 1
-    - name: "verification_demandes_permis"
-      label: "Travaux publics - Vérification des demandes de permis"
-      description: "L'Assistant de vérification des demandes de permis analyse les demandes de permis de construction pour déterminer si elles sont complètes ou nécessitent des corrections avant de passer à l'étape suivante."
-      iconURL: "https://drive.google.com/thumbnail?id=1qVGFL44-TDuieBGFGkWD9ZxyABXTjVx8&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Travaux publics - Vérification des demandes de permis"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant pour la vérification des demandes de permis de construction. Fournissez-moi les documents et informations soumis par un citoyen, et je vous dirai si la demande est complète, peut être envoyée à l'étape suivante ou si des éléments sont manquants. Si nécessaire, je peux également générer un courriel expliquant pourquoi la demande est incomplète. Posez-moi vos questions, et je vous aiderai à simplifier le processus !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_wSuew6LyxUMnY741a6DXxisH"
-        temperature: 1
-    - name: "assistant_evaluation_appels_offres"
-      label: "Travaux publics - Assistant d'évaluation d'appels d'offres"
-      description: "L'Assistant d'évaluation des appels d'offres municipaux guide l'utilisateur étape par étape dans l'analyse et la notation des soumissions en validant chaque critère avant de passer à l'étape suivante."
-      iconURL: "https://drive.google.com/thumbnail?id=1JExy60UnGay23v-c5giOHj01Nw4fmmt9&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Travaux publics - Assistant d'évaluation d'appels d'offres"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant dédié à l'évaluation des appels d'offres municipaux. Mon rôle est de vous accompagner dans l'analyse des soumissions en suivant une méthodologie rigoureuse. Vous pouvez me fournir votre grille de correction et les documents pertinents, et je vous guiderai pas à pas pour attribuer des notes et justifications précises. Chaque critère sera validé avec vous avant de passer au suivant afin d'assurer une évaluation complète et conforme. Une fois l'analyse terminée, je générerai un rapport final structuré. Démarrons ensemble !"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_GgKb5TbADLXlmRFmnzl3tTom"
-        temperature: 1
-    - name: "creation_grilles_analyse_appels_offres"
-      label: "Travaux publics - Création de grilles d'analyse d'appels d'offres"
-      description: "L'Assistant de création de grilles d'analyse d'appels d'offres municipaux aide à structurer et personnaliser les grilles d'évaluation et de correction des appels d'offres publics en respectant les standards légaux et les recommandations officielles."
-      iconURL: "https://drive.google.com/thumbnail?id=1-JErHO_pBJ8ZYTrSKpvC04DSwPlHBVJ4&sz=w100"
-      showIconInMenu: true
-      showIconInHeader: true
-      default: false
-      preset:
-        endpoint: "assistants"
-        modelLabel: "Travaux publics - Création de grilles d'analyse d'appels d'offres"
-        model: "gpt-4o"
-        greeting: "Je suis votre assistant spécialisé dans la création de grilles d'analyse et de correction pour les appels d'offres municipaux. Mon rôle est de vous guider pas à pas pour élaborer une grille conforme aux exigences légales et adaptée à vos besoins. Ensemble, nous définirons le mode d'adjudication, structurerons les critères de pondération et finaliserons une grille de correction détaillée. Fournissez-moi vos documents et indications, et je vous accompagnerai à chaque étape pour garantir un processus rigoureux et optimal. Prêt à commencer ?"
-        promptPrefix: ""
-        resendFiles: false
-        imageDetail: "auto"
-        maxContextTokens: 128000
-        max_tokens: 4096
-        assistant_id: "asst_Cxkotdnnhc4NeOOyKEoWeaDb"
-        temperature: 1
         
