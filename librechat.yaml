@@ -319,7 +319,7 @@ fileConfig:
 #     YourCustomEndpointName:
 #       fileLimit: 2
 #       fileSizeLimit: 5
-  serverFileSizeLimit: 25  # Global server file size limit in MB
+  serverFileSizeLimit: 50  # Global server file size limit in MB
   avatarSizeLimit: 5  # Limit for user avatar image size in MB
 # See the Custom Configuration Guide for more information on Assistants Config:
 # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
